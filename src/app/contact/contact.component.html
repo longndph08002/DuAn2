@@ -1,0 +1,95 @@
+
+<body>
+    <br><br>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-12">
+              <div class="row">
+                  <div class="lienhe">
+                    <h4 class="">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                    <h3>Thông tin liên hệ</h3>
+                  </div>
+              </div>
+              <div class="row bg-light pt-3 pb-3 mb-4">
+                  <div class="col-lg-6 col-12">
+                    <form  name="form" [formGroup]="form" >
+                      <div class="form-row mb-3">
+                        <div class="col">
+                          <b>Họ và Tên:</b>
+                          <input type="text"
+                          required formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}"
+              
+                          class="form-control" placeholder="Họ và tên :">
+                          <div class="invalid-feedback">
+                            <div> Họ và tên không được bỏ trống!</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                         <b> Điện thoại:</b>
+                          <input type="text" 
+                          pattern="[0-9]{10}" formControlName="sdt" [ngClass]="{'is-invalid':form.get('sdt').touched && form.get('sdt').invalid}"maxlength="10" 
+
+                          class="form-control" placeholder="Số điện thoại :">
+                          <div class="invalid-feedback">
+                            <div> Số điện thoại không được bỏ trống!</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-row mb-3">
+                        <div class="col">
+                         <b> Email:</b>
+                          <input type="text" 
+                          formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"
+
+                          class="form-control" placeholder="Email :">
+                          <div class="invalid-feedback">
+                            <div> Email không được bỏ trống! và phải đúng định dạng</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <b>Tiêu đề:</b>
+                          <input type="text"formControlName="tieude" [ngClass]="{'is-invalid':form.get('tieude').touched && form.get('tieude').invalid}"
+                          class="form-control" placeholder="Tiêu đề :">
+                          <div class="invalid-feedback">
+                            <div> Tiêu đề không được bỏ trống</div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <b>Nội dung:</b>
+                        <textarea class="form-control"formControlName="noidung" [ngClass]="{'is-invalid':form.get('noidung').touched && form.get('noidung').invalid}"  id="exampleFormControlTextarea1" rows="3" placeholder="Nội dung :"></textarea>
+                      </div>
+                      <button type="submit" style="margin-left: 110px" class="btn btn-danger mb-4">Gửi liên hệ</button>
+                    </form>
+                  </div>
+                  <br>
+                  <div class="col-lg-6 col-12">
+                  <div ><i class="far fa-address-card"></i>  <b> Ghé qua tại:</b> <br>Số 5, tổ 10, Khu 1, Thành phố Hạ Long, Quảng Ninh, Vietnam</div>
+                  <br>
+                  <div><i class="fas fa-envelope-open"></i> <b>Email:</b>
+                    
+                      Email@gmail.com
+                  </div><br>
+                  <div><i class="fas fa-phone-square"></i> <b>Điện thoại:</b><br>0123456789
+                  </div>
+                  <br>
+                   
+                      <div style="width: 100%">
+                        <div><i class="fas fa-plus"></i> <b> Bản đồ:</b></div>
+                       
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.9549209396814!2d107.08375851489639!3d20.954325386038693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a594477bca983%3A0xca1be757f71914a0!2zWk9VIFNuZWFrZXIgTGFib3JhdG9yeSBI4bqhIExvbmcgLSBDaMSDbSBzw7NjIGdpw6B5IGNodXnDqm4gbmdoaeG7h3A!5e0!3m2!1sen!2s!4v1596037420456!5m2!1sen!2s" width="350" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+
+<br>
+                      
+                  </div>
+                  <div class="icons" style="margin-left:300px">
+                          <a href=""><i class="fa fa-facebook"></i></a>
+                          <a href=""><i class="fa fa-twitter"></i></a>
+                          <a href=""><i class="fa fa-linkedin"></i></a>
+                          <a href=""><i class="fa fa-github"></i></a>
+                      </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</body>

@@ -1,0 +1,89 @@
+
+<body>
+  <!-- <form itemref="form" action="/" method="GET"> -->
+	<!-- main -->
+	<div class="main-w3layouts wrapper" id="error">
+		<h1>Đăng Ký Tài Khoản</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top" > 
+				<form name="form" name="form" [formGroup]="form">
+          <div class="inputt">
+            Họ và Tên: </div>
+            <div>
+            <input type="text" required formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}"
+              id="ten"class="form-control"  formControlName="name"placeholder="Họ và tên :">
+            <div class="invalid-feedback">
+							<div> Họ và tên không được bỏ trống!</div>
+						  </div>
+          </div>
+          <br>
+          <div class="inputt">
+            Số điện thoại: </div>
+            <div>
+            <input type="text" pattern="[0-9]{10}" formControlName="sdt" [ngClass]="{'is-invalid':form.get('sdt').touched && form.get('sdt').invalid}"maxlength="10" id="sdt" class="form-control" placeholder="Số điện thoại :">
+            <div class="invalid-feedback">
+							<div> Số điện thoại không được bỏ trống!</div>
+						  </div>
+          </div>
+        <br>
+          <div class="inputt">
+           Email: </div>
+         <div>
+            <input type="email" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"id="email" class="form-control" placeholder="Email :">
+         
+            <div class="invalid-feedback">
+							<div> Email không được bỏ trống! và phải đúng định dạng</div>
+              </div>
+             </div>
+          <br>
+          <div class="inputt">
+             Địa chỉ:</div>
+            <div>
+            <input type="text"formControlName="diachi" [ngClass]="{'is-invalid':form.get('diachi').touched && form.get('diachi').invalid}" id="diachi" class="form-control" placeholder="Địa chỉ :">
+            <div class="invalid-feedback">
+							<div>Địa chỉ không được bỏ trống!</div>
+						  </div>
+          </div>
+          <br>
+          <div class="inputt">
+              Tên đăng nhập:</div>
+            <div>
+            <input type="text" formControlName="tendn" [ngClass]="{'is-invalid':form.get('tendn').touched && form.get('tendn').invalid}"id="tendn" class="form-control" placeholder="Tên đăng nhập :">
+            <div class="invalid-feedback">
+							<div> Tên đăng nhập không được bỏ trống!</div>
+              </div>
+            </div><br>
+          <div class="inputt">
+             Mật khẩu:</div>
+          <div>
+            <input type="password" ng-model="mk" formControlName="mk" [ngClass]="{'is-invalid':form.get('mk').touched && form.get('mk').invalid}"id="mk" minlength="8" class="form-control" placeholder="Mật khẩu :">
+            <div class="invalid-feedback">
+							<div> Mật khẩu không được bỏ trống!</div>
+              </div>
+            </div>
+          <br>
+          <div class="inputt">
+              Nhập lại mật khẩu:</div>
+            <div >
+            <input type="text" ng-model="mk2" id="mk2"formControlName="mk2" [ngClass]="{'is-invalid':form.get('mk2').touched && form.get('mk2').invalid}" minlength="8" 
+            class="form-control" placeholder="Nhập lại mật khẩu:"
+            
+            >
+            <div class="invalid-feedback">
+							<div> Mật khẩu nhập lại không được bỏ trống và trùng với mật khẩu</div>
+              </div>
+              
+            </div>
+          <div class="wthree-text">
+					
+						<div class="clear"> </div>
+					</div>
+          <input type="submit" value="Đăng Ký">
+          <!-- <input type="submit" value="Đăng Ký"> -->
+				</form>
+				<p>Bạn đã có tài khoản??? &nbsp; <a href="#"> Đăng Nhập Ngay!</a></p>
+			</div>
+		</div>
+    </div>
+  <!-- </form> -->
+</body>
